@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ephemeral Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Ephemeral Chat</h1>
+  <div id="room-display"></div>
+  <input id="room-input" placeholder="Enter Room Code">
+  <button onclick="joinRoom()">Join</button>
+  <div id="chat" style="display:none;">
+    <div id="messages"></div>
+    <input id="msg" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
