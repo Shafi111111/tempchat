@@ -15,7 +15,7 @@ function joinRoom() {
   document.getElementById("room-display").textContent = "Room: " + room;
   document.getElementById("chat").style.display = "block";
 
-  ws = new WebSocket("wss://" + location.host);
+ws = new WebSocket((location.protocol === "https:" ? "wss://" : "ws://") + location.host);
   ws.onopen = () => {
     ws.send(JSON.stringify({ type: "join", room }));
   };
